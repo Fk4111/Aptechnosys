@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-600/10 via-violet-600/5 to-transparent rounded-full pointer-events-none blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-cyan-600/8 to-transparent rounded-full pointer-events-none blur-3xl" />
 
-      <motion.div
+      {/* <motion.div
         animate={{ y: [-10, 10, -10], rotate: [0, 5, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-32 right-[10%] w-64 h-64 rounded-full bg-gradient-to-br from-violet-600/20 to-blue-600/20 blur-3xl pointer-events-none"
@@ -115,7 +115,7 @@ export default function Hero() {
         animate={{ y: [10, -10, 10], rotate: [0, -5, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-32 left-[10%] w-48 h-48 rounded-full bg-gradient-to-br from-cyan-600/20 to-blue-600/20 blur-3xl pointer-events-none"
-      />
+      /> */}
 
       <div className="container-custom relative z-10 w-full flex min-h-[calc(100vh-6rem)] flex-col items-center text-center pt-10 pb-12 md:pt-14 md:pb-14">
         <motion.div {...fade(0.05, 0.45)} className="mb-8">
@@ -171,32 +171,6 @@ export default function Hero() {
             </div>
           </div>
         </motion.div>
-
-        <div className="pointer-events-none absolute inset-0 hidden 2xl:block">
-          {[
-            { label: "Next.js", x: "-520px", y: "-220px", delay: 0.5 },
-            { label: "React", x: "460px", y: "-210px", delay: 0.6 },
-            { label: "Node.js", x: "-500px", y: "210px", delay: 0.7 },
-            { label: "PostgreSQL", x: "440px", y: "210px", delay: 0.8 },
-          ].map((badge) => (
-            <motion.div
-              key={badge.label}
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.35, delay: badge.delay }}
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: `translate(calc(-50% + ${badge.x}), calc(-50% + ${badge.y}))`,
-              }}
-              className="glass border border-white/10 rounded-xl px-4 py-2 text-xs text-zinc-400 font-mono whitespace-nowrap shadow-lg shadow-black/20"
-            >
-              {badge.label}
-            </motion.div>
-          ))}
-        </div>
       </div>
    
       <motion.div {...fade(0.5, 0.4)} className="mt-10 flex flex-col items-center gap-2">
